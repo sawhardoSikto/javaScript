@@ -191,4 +191,50 @@ const employees = [
 
 console.log(totalSalary(employees));
 
+console.log("_____________________________");
 
+// problem 1 : helo the zoo manager
+
+function calculateMoney(quantityOfTicket)
+{   
+    let sum=0;
+    if (quantityOfTicket<0)
+    {
+        return "Invalid Number";
+    }
+    else
+    {
+        sum=(120*quantityOfTicket)-(500+(8*50));
+        return sum;
+    }
+    
+}
+console.log(calculateMoney(-130));
+console.log("_____________________________");
+
+//check name which is good or which is bad
+
+function checkName(name)
+{
+    if (typeof name=="string")
+    {
+
+        let lowercase=name.toLowerCase();
+        let lastchar=lowercase[lowercase.length-1];
+        if(lastchar=='a' || lastchar=='y' || lastchar=='i' || lastchar=='e' || lastchar=='o' || lastchar=='u' || lastchar=='u' || lastchar=='w' )
+            {
+                return "good name";
+            } 
+            else
+            {
+                return "bad name"
+            }
+    }
+    else
+    {
+        return "invalid";
+    }
+    
+
+}
+console.log(checkName("sikto"));
