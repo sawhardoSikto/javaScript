@@ -238,3 +238,40 @@ function checkName(name)
 
 }
 console.log(checkName("sikto"));
+console.log("________________________");
+
+function calculateTax(income,expense)
+{
+    if(income<0 || expense<0 || expense>income)
+    {
+        return "invalid input";
+    }
+    else
+    {
+        let sub=income-expense;
+        let tax=sub*.2;
+        return tax;
+    }
+
+
+}
+console.log(calculateTax(10000,3000));
+console.log(calculateTax(1000,3000));
+
+console.log("________________________");
+
+function sendNotification(email) {
+    if (!email.includes("@") || email.indexOf("@") !== email.lastIndexOf("@")) {
+        return "Invalid Email";
+    } 
+    else {
+        let split = email.split("@");
+        let part1 = split[0];
+        let part2 = split[1];
+        return part1 + " sent you an email from " + part2;
+    }
+}
+
+console.log(sendNotification('siktobiswas@gmail.com'));  
+console.log(sendNotification('siktobiswas@@gmail.com')); 
+console.log(sendNotification('siktobiswasgmail.com'));  
